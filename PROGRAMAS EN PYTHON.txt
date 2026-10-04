@@ -1,0 +1,83 @@
+# Programa para saludar al usuario
+nombre = input("¿Cómo te llamas? ")
+print(f"¡Hola, {nombre}! Bienvenido a Python.")
+
+
+
+
+
+----------------------------
+
+
+# Calculadora simple
+print("Selecciona una operación:")
+print("1. Sumar")
+print("2. Restar")
+print("3. Multiplicar")
+print("4. Dividir")
+
+opcion = input("Introduce el número de la operación (1/2/3/4): ")
+
+num1 = float(input("Primer número: "))
+num2 = float(input("Segundo número: "))
+
+if opcion == '1':
+    print(f"Resultado: {num1 + num2}")
+elif opcion == '2':
+    print(f"Resultado: {num1 - num2}")
+elif opcion == '3':
+    print(f"Resultado: {num1 * num2}")
+elif opcion == '4':
+    if num2 != 0:
+        print(f"Resultado: {num1 / num2}")
+    else:
+        print("Error: No se puede dividir entre cero.")
+else:
+    print("Opción no válida.")
+
+
+
+
+_-----------------------------------
+
+Contador de Números Pares e Impares
+
+# Clasificador de números
+limite = int(input("¿Hasta qué número quieres evaluar? "))
+
+for i in range(1, limite + 1):
+    if i % 2 == 0:
+        print(f"El número {i} es PAR")
+    else:
+        print(f"El número {i} es IMPAR")
+
+import random
+import string
+
+
+
+
+
+--------------------------------------------------
+Juego de Adivinar el Número
+
+import random
+
+# Juego de adivinanza
+numero_secreto = random.randint(1, 20)
+intentos = 0
+
+print("Estoy pensando en un número entre 1 y 20. ¡Adivínalo!")
+
+while True:
+    intento = int(input("Introduce tu número: "))
+    intentos += 1
+    
+    if intento < numero_secreto:
+        print("Demasiado bajo. Intenta otra vez.")
+    elif intento > numero_secreto:
+        print("Demasiado alto. Intenta otra vez.")
+    else:
+        print(f"¡Felicidades! Acertaste en {intentos} intentos.")
+        break
+
